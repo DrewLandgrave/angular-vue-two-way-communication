@@ -12,7 +12,19 @@ Using this command uses the [vue-cli web comopnent](https://cli.vuejs.org/guide/
 
 ## Building our Vue Custom Element
 
-To build a web component ready vue element all you need to do is install the `vue-cli-service` then run the above command to package your component into a single js file. 
+To build a web component ready vue element all you need to do is install the `vue-cli-service` then run the above command to package your component into a single js file. You'll need to setup your `main.js` file as follows.
+
+```js
+import Vue from 'vue'
+
+import App from './App.vue'
+import vueCustomElement from 'vue-custom-element'
+Vue.use(vueCustomElement)
+
+
+Vue.customElement('vue-widget', App)
+```
+Where the first argument in `Vue.customElement` is the tag name you want to define.
 
 ## Including your web component in Angular
 

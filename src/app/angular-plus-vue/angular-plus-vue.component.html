@@ -1,0 +1,7 @@
+<h2>Vue Custom Elements in an Angular App</h2>
+<p>Everything in the green box is a Vue Custom Element</p>
+<vue-widget msg="1st Vue Element" (someEvent)="hSomeEvent($event)" angularMsg="{{angularValue}}"></vue-widget>
+<p>This value is from Vue {{valueFromVue}}</p>
+<button (click)="clickButton()">Click me to show a message</button>
+<p>We can have multiple of them doing different things</p>
+<vue-widget msg="2nd Vue Element" (someEvent)="hSomeOtherEvent($event)" angularMsg="{{angularValue}}"></vue-widget>
